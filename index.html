@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>高中语文背诵 · 必修上册</title>
+<title>高中语文背诵</title>
 <style>
 /* ===== 全局重置 ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -231,7 +231,7 @@ footer {
 
 <!-- 顶部导航（与主站一致） -->
 <header class="topbar">
-  <a href="https://gzxxw.github.io" class="logo">gzxxw 主站</a>
+  <a href="https://gzxxw.github.io" class="logo">高中学习网</a>
   <nav>
     <a href="../math/">数学</a>
     <a href="../chinese/" class="active">语文</a>
@@ -240,8 +240,8 @@ footer {
     <a href="../biology/">生物</a>
     <a href="../history/">历史</a>
     <a href="../geography/">地理</a>
-    <a href="../politics/">政治</a>
-    <a href="../tech/">信息技术</a>
+    <a href="../ddyfz/">政治</a>
+    
   </nav>
 </header>
 
@@ -330,6 +330,332 @@ footer {
 </footer>
 
 <script>
+
+// ------------------- 数据层：必修上篇目库 -------------------
+const poemsData = {
+    "qinyuanchun": {
+        id: "qinyuanchun", title: "沁园春·长沙", author: "毛泽东", dynasty: "现代", category: "bx1",
+        content: [
+            { text: "独立寒秋，湘江北去，橘子洲头。", pinyin: ["", "", "", "", "", "", "", "", "", "", "", ""], typoPos: [] },
+            { text: "看万山红遍，层林尽染；漫江碧透，百舸争流。", pinyin: ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "gě"], typoPos: [19] },
+            { text: "鹰击长空，鱼翔浅底，万类霜天竞自由。", pinyin: ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], typoPos: [] },
+            { text: "怅寥廓，问苍茫大地，谁主沉浮？", pinyin: ["", "liáo kuò", "", "", "", "", "", "", "", "", "", ""], typoPos: [1, 2] },
+            { text: "携来百侣曾游，忆往昔峥嵘岁月稠。", pinyin: ["", "", "", "", "", "", "", "", "", "", "róng", "", "", "", "", "", ""], typoPos: [10] },
+            { text: "恰同学少年，风华正茂；书生意气，挥斥方遒。", pinyin: ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "qiú"], typoPos: [17] },
+            { text: "指点江山，激扬文字，粪土当年万户侯。", pinyin: ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "hóu"], typoPos: [18] },
+            { text: "曾记否，到中流击水，浪遏飞舟？", pinyin: ["", "", "", "", "", "", "", "", "", "", "è", "", "", ""], typoPos: [10] }
+        ],
+        notes: [
+            { word: "舸", explain: "大船。", pos: [1, 19] },
+            { word: "寥廓", explain: "广远空阔，这里用来描写宇宙之大。", pos: [3, 1] },
+            { word: "峥嵘", explain: "形容山势高峻，引申为不平凡、不寻常。", pos: [4, 10] },
+            { word: "遒", explain: "强劲有力。", pos: [5, 17] },
+            { word: "侯", explain: "封侯，无中间一竖；注意与“候”（等候，有中间一竖）区分。", pos: [6, 18] },
+            { word: "遏", explain: "阻止，阻挡。", pos: [7, 10] }
+        ],
+        translation: "深秋时节，我独自站在橘子洲头，望着湘江向北奔流。看万千山峰全都变成了红色，层层树林好像染过颜色一样；江水清澈澄碧，一艘艘大船乘风破浪前行。鹰在广阔的天空里飞，鱼在清澈的水里游，万物都在深秋中争求自由。面对着无边无际的宇宙，（千万种思绪一齐涌上心头）我要问：这苍茫大地的盛衰兴废，由谁来主宰呢？\n\n曾经我和我的同学，经常携手结伴到这里漫游。在一起商讨国家大事，那无数不平凡的岁月至今还萦绕在我的心头。同学们正值青春年少，风采才华正盛；大家踌躇满志，意气奔放，正强劲有力。评论国家大事，写出这些激浊扬清的文章，把当时的军阀官僚看得如同粪土。可曾记得，那时我们在江水深急的地方游泳，那激起的浪花几乎挡住了疾驰而来的船？",
+        analysis: "【背景】1925年，毛泽东同志离开湖南前往广州主持农民运动讲习所，途经长沙，重游橘子洲，感慨之余写下此词。\n【主旨】通过对长沙秋景的描绘和对青年时代革命斗争生活的回忆，抒发了革命青年对国家命运的感慨和以天下为己任的豪情壮志。\n【手法】上阕写景，融情于景，通过“万山红遍”“百舸争流”等意象展现生机勃勃的景象；下阕抒情，回忆往昔，运用设问结尾，气势磅礴。",
+        typos: ["侯", "舸", "遒", "遏"]
+    },
+    "duangexing": {
+        id: "duangexing", title: "短歌行", author: "曹操", dynasty: "东汉", category: "bx1",
+        content: [
+            { text: "对酒当歌，人生几何！譬如朝露，去日苦多。", pinyin: ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], typoPos: [] },
+            { text: "慨当以慷，忧思难忘。何以解忧？唯有杜康。", pinyin: ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], typoPos: [] },
+            { text: "青青子衿，悠悠我心。但为君故，沉吟至今。", pinyin: ["", "", "", "jīn", "", "", "", "", "", "", "", "", "", "", "", "", ""], typoPos: [3] },
+            { text: "呦呦鹿鸣，食野之苹。我有嘉宾，鼓瑟吹笙。", pinyin: ["yōu", "yōu", "", "", "", "", "", "", "", "", "", "", "", "", ""], typoPos: [0, 1] },
+            { text: "明明如月，何时可掇？忧从中来，不可断绝。", pinyin: ["", "", "", "", "", "", "duō", "", "", "", "", "", "", "", "", "", ""], typoPos: [6] },
+            { text: "越陌度阡，枉用相存。契阔谈讌，心念旧恩。", pinyin: ["", "", "", "", "", "", "", "", "", "", "yàn", "", "", "", "", ""], typoPos: [10] },
+            { text: "月明星稀，乌鹊南飞。绕树三匝，何枝可依？", pinyin: ["", "", "", "", "", "", "", "", "", "", "zā", "", "", "", "", ""], typoPos: [10] },
+            { text: "山不厌高，海不厌深。周公吐哺，天下归心。", pinyin: ["", "", "", "", "", "", "", "", "", "", "bǔ", "", "", "", "", ""], typoPos: [10] }
+        ],
+        notes: [
+            { word: "衿", explain: "衣领。青衿是周代读书人的服装，这里指代有学识的人。", pos: [2, 3] },
+            { word: "呦呦", explain: "鹿叫的声音。", pos: [3, 0] },
+            { word: "掇", explain: "拾取，摘取。", pos: [4, 6] },
+            { word: "讌", explain: "通“宴”，宴饮。", pos: [5, 10] },
+            { word: "匝", explain: "周，圈。", pos: [6, 10] },
+            { word: "哺", explain: "口中咀嚼的食物。", pos: [7, 10] }
+        ],
+        translation: "一边喝酒一边高歌，人生的岁月有多少？好比晨露转瞬即逝，逝去的时光实在太多！宴会上的歌声激昂慷慨，忧愁却难以遗忘。用什么来排解忧愁？只有豪饮美酒。\n\n有学识的才子们啊，你们令我朝夕思慕。只是因为您的缘故，让我沉痛吟诵至今。阳光下鹿群呦呦欢鸣，在原野吃着艾蒿。一旦四方贤才光临舍下，我将奏瑟吹笙宴请嘉宾。\n\n当空悬挂的皓月哟，什么时候可以摘取呢？忧愁从心中涌出，像长丝一样连续不断。穿过纵横交错的小路，枉驾来访。久别重逢谈心宴饮，心中惦念着往日的情谊。\n\n月光明亮星光稀疏，一群寻巢乌鹊向南飞去。绕树飞了几圈却没敛翅，哪个枝头才是它们的栖身之处？高山不嫌弃土壤，所以能成就其高大；大海不嫌弃细流，所以能成就其深邃。只有像周公那样礼待贤才，才能使天下人心都归向我。",
+        analysis: "【背景】曹操平定北方后，率军南下，在赤壁之战前夕宴请文武，作此诗以抒怀。\n【主旨】表达了诗人求贤若渴的心情和统一天下的雄心壮志。\n【手法】运用比兴手法（如“明明如月”、“乌鹊南飞”）和典故（如“周公吐哺”），情感沉郁顿挫，慷慨悲凉。",
+        typos: ["衿", "呦", "掇", "讌", "匝", "哺"]
+    },
+    // ... 此处省略其他篇目（归园田居、梦游天姥等），结构同上 ...
+    // 为了演示，我们先把这两篇放进去，后续你可以按这个格式补齐
+};
+
+// ------------------- 全局状态 -------------------
+let currentPoemId = "qinyuanchun";
+let currentMode = "read";
+let showJudou = true;
+let learnedSet = new Set(JSON.parse(localStorage.getItem("yybs_learned") || "[]"));
+let weakSet = new Set(JSON.parse(localStorage.getItem("yybs_weak") || "[]"));
+let revealedBlanks = new Set(); // 用于挖空模式下记录已揭示的字
+
+// ------------------- DOM 引用 -------------------
+const poemListEl = document.getElementById("poem-list");
+const poemTitleEl = document.getElementById("poem-title");
+const poemMetaEl = document.getElementById("poem-meta");
+const poemBodyEl = document.getElementById("poem-body");
+const searchInput = document.getElementById("search-input");
+const modeSelect = document.getElementById("mode-select");
+const fillDensity = document.getElementById("fill-density");
+const densityLabel = document.getElementById("density-label");
+const fillLevelWrap = document.getElementById("fill-level-wrap");
+const btnJudou = document.getElementById("btn-judou");
+const tabNotes = document.getElementById("tab-notes");
+const tabTranslation = document.getElementById("tab-translation");
+const tabAnalysis = document.getElementById("tab-analysis");
+const typoSummaryEl = document.getElementById("typo-summary");
+
+// ------------------- 初始化篇目列表 -------------------
+function renderPoemList(filterCat = "bx1", keyword = "") {
+    poemListEl.innerHTML = "";
+    Object.values(poemsData).forEach(poem => {
+        if (poem.category !== filterCat) return;
+        if (keyword && !poem.title.includes(keyword) && !poem.author.includes(keyword)) return;
+        
+        const li = document.createElement("li");
+        li.textContent = poem.title;
+        li.dataset.id = poem.id;
+        if (poem.id === currentPoemId) li.classList.add("active");
+        li.onclick = () => switchPoem(poem.id);
+        poemListEl.appendChild(li);
+    });
+}
+renderPoemList();
+
+// ------------------- 切换篇目 -------------------
+function switchPoem(id) {
+    currentPoemId = id;
+    revealedBlanks.clear();
+    document.querySelectorAll("#poem-list li").forEach(li => {
+        li.classList.toggle("active", li.dataset.id === id);
+    });
+    renderCurrentPoem();
+}
+
+// ------------------- 渲染当前篇目 -------------------
+function renderCurrentPoem() {
+    const poem = poemsData[currentPoemId];
+    if (!poem) return;
+
+    poemTitleEl.textContent = poem.title;
+    poemMetaEl.textContent = `${poem.dynasty} · ${poem.author}`;
+    
+    // 渲染正文
+    poemBodyEl.innerHTML = "";
+    poem.content.forEach((para, pIdx) => {
+        const p = document.createElement("p");
+        p.className = "stanza";
+        
+        // 处理句读
+        let displayText = para.text;
+        if (!showJudou) {
+            displayText = displayText.replace(/[，。？！；：、]/g, "");
+        }
+
+        // 构建带拼音和易错字的HTML
+        let html = "";
+        for (let i = 0; i < displayText.length; i++) {
+            const char = displayText[i];
+            const isTypo = para.typoPos.includes(i);
+            const py = para.pinyin[i];
+            
+            let charHtml = char;
+            if (py) {
+                charHtml = `<ruby>${char}<rt>${py}</rt></ruby>`;
+            }
+            if (isTypo) {
+                const note = poem.notes.find(n => n.pos[0] === pIdx && n.pos[1] === i);
+                charHtml = `<span class="typo" data-tip="${note ? note.explain : '易错字'}">${charHtml}</span>`;
+            }
+            
+            // 挖空逻辑
+            if (currentMode === "fill" && !isTypo) {
+                const density = parseInt(fillDensity.value);
+                // 简单间隔挖空逻辑（跳过标点和拼音）
+                if ((pIdx * 100 + i) % density === 0 && char.match(/[\u4e00-\u9fa5]/)) {
+                    const blankId = `blank-${pIdx}-${i}`;
+                    const isRevealed = revealedBlanks.has(blankId);
+                    charHtml = `<span class="blank ${isRevealed ? 'revealed' : ''}" data-blank-id="${blankId}" onclick="revealBlank('${blankId}', '${char}')">${isRevealed ? charHtml : '&nbsp;'}</span>`;
+                }
+            }
+            
+            // 默写逻辑
+            if (currentMode === "quiz") {
+                if (char.match(/[\u4e00-\u9fa5]/)) {
+                    charHtml = `<input type="text" class="input-blank" data-correct="${char}" maxlength="1" oninput="checkInput(this)">`;
+                }
+            }
+            
+            html += charHtml;
+        }
+        p.innerHTML = html;
+        poemBodyEl.appendChild(p);
+    });
+
+    // 渲染注释
+    tabNotes.innerHTML = "<ul>" + poem.notes.map(n => `<li><span class="note-word">${n.word}：</span>${n.explain}</li>`).join("") + "</ul>";
+    
+    // 渲染译文
+    tabTranslation.innerHTML = poem.translation.split('\n').map(p => `<p>${p}</p>`).join("");
+    
+    // 渲染赏析
+    tabAnalysis.innerHTML = poem.analysis.split('\n').map(p => `<p>${p}</p>`).join("");
+    
+    // 渲染易错字汇总
+    typoSummaryEl.innerHTML = "📌 <strong>本文易错字：</strong>" +
+        poem.typos.map(t => `<span class="typo-link" onclick="highlightTypo('${t}')">${t}</span>`).join("");
+
+    updateProgressUI();
+}
+
+// ------------------- 交互功能 -------------------
+
+// 模式切换
+modeSelect.onchange = (e) => {
+    currentMode = e.target.value;
+    fillLevelWrap.style.display = (currentMode === "fill") ? "flex" : "none";
+    revealedBlanks.clear();
+    renderCurrentPoem();
+};
+
+// 挖空密度
+fillDensity.oninput = () => {
+    densityLabel.textContent = ["极密","密集","中等","稀疏","极疏"][fillDensity.value - 1];
+    if (currentMode === "fill") renderCurrentPoem();
+};
+
+// 句读切换
+btnJudou.onclick = () => {
+    showJudou = !showJudou;
+    btnJudou.textContent = showJudou ? "⏸ 句读" : "👁 句读";
+    renderCurrentPoem();
+};
+
+// Tab切换
+document.querySelectorAll(".tab-btn").forEach(btn => {
+    btn.onclick = () => {
+        const tabId = btn.dataset.tab;
+        document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        document.querySelectorAll(".tab-content").forEach(c => c.style.display = "none");
+        document.getElementById(`tab-${tabId}`).style.display = "block";
+    };
+});
+
+// 搜索
+searchInput.oninput = (e) => {
+    const catBtn = document.querySelector(".cat-btn.active");
+    renderPoemList(catBtn.dataset.cat, e.target.value.trim());
+};
+
+// 分类切换
+document.querySelectorAll(".cat-btn").forEach(btn => {
+    btn.onclick = () => {
+        document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderPoemList(btn.dataset.cat, searchInput.value.trim());
+    };
+});
+
+// 热门篇目点击
+document.querySelectorAll(".hot-item").forEach(item => {
+    item.onclick = () => switchPoem(item.dataset.id);
+});
+
+// 揭示挖空
+window.revealBlank = (id, char) => {
+    const el = document.querySelector(`[data-blank-id="${id}"]`);
+    if (el && !el.classList.contains("revealed")) {
+        el.innerHTML = char;
+        el.classList.add("revealed");
+        revealedBlanks.add(id);
+    }
+};
+
+// 默写校验
+window.checkInput = (input) => {
+    const correct = input.dataset.correct;
+    if (input.value === correct) {
+        input.classList.remove("wrong");
+        input.classList.add("correct");
+    } else if (input.value !== "") {
+        input.classList.remove("correct");
+        input.classList.add("wrong");
+    } else {
+        input.classList.remove("correct", "wrong");
+    }
+};
+
+// 标记生疏
+document.getElementById("btn-mark-weak").onclick = () => {
+    if (weakSet.has(currentPoemId)) {
+        weakSet.delete(currentPoemId);
+        alert("已从生疏本移除");
+    } else {
+        weakSet.add(currentPoemId);
+        alert("已加入生疏本，复习时重点关注");
+    }
+    saveProgress();
+    updateProgressUI();
+};
+
+// 重置进度
+document.getElementById("btn-reset-progress").onclick = () => {
+    if (confirm("确定要重置所有背诵进度和生疏标记吗？")) {
+        learnedSet.clear();
+        weakSet.clear();
+        saveProgress();
+        updateProgressUI();
+    }
+};
+
+// 高亮易错字
+window.highlightTypo = (char) => {
+    const poem = poemsData[currentPoemId];
+    if (!poem) return;
+    // 简单的滚动查找，实际应用中可以更精确
+    const typoEls = document.querySelectorAll(".typo");
+    typoEls.forEach(el => {
+        if (el.textContent.includes(char)) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            el.style.background = "rgba(231,76,60,.2)";
+            setTimeout(() => el.style.background = "", 1500);
+        }
+    });
+};
+
+// ------------------- 进度管理 -------------------
+function saveProgress() {
+    localStorage.setItem("yybs_learned", JSON.stringify([...learnedSet]));
+    localStorage.setItem("yybs_weak", JSON.stringify([...weakSet]));
+}
+
+function updateProgressUI() {
+    document.getElementById("learned-count").textContent = learnedSet.size;
+    document.getElementById("weak-count").textContent = weakSet.size;
+    
+    // 如果当前篇目不在已背列表，点击正文区域自动加入（模拟学习行为）
+    poemBodyEl.onclick = () => {
+        if (!learnedSet.has(currentPoemId)) {
+            learnedSet.add(currentPoemId);
+            saveProgress();
+            updateProgressUI();
+        }
+    };
+}
+
+// 初始渲染
+renderCurrentPoem();
+updateProgressUI();
+
+</script>
+</body>
+</html>
+
 // ========== 第三段 JavaScript 从这里开始 ==========
 </script>
 </body>
